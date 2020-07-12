@@ -1,0 +1,4 @@
+com/br/filereader/FilereaderApiApplication.class
+com/br/filereader/restapi/ReadersController.class
+com/br/filereader/services/ReadersCvsFilesService.class
+com/br/filereader/infra/config/SwaggerConfig.class

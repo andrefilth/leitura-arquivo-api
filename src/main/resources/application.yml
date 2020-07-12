@@ -1,0 +1,11 @@
+server.port: 9001
+springfox.documentation.swagger.v2.path: /api-docs
+spring:
+    application.name: file-readers
+    data.mongodb.uri: mongodb://localhost:27058/db.readers
+    h2.console:
+        enabled: true
+        path: /console
+        jooq.sql-dialect: H2
+
+logging.pattern.console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta([%t]) %m%n"
