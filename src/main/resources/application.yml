@@ -1,11 +1,15 @@
 server.port: 9001
 springfox.documentation.swagger.v2.path: /api-docs
+#spring.jpa.hibernate.ddl-auto=none
+
+
+
 spring:
     datasource:
-        name: tadpgweb
-        username: postgres
-        password: secret
-        url: jdbc:postgresql://localhost:5442/tadpgweb
+        name: tb_test
+        username: admin
+        password: admin
+        url: jdbc:postgresql://localhost:5432/tb_test
         driver-class-name: org.postgresql.Driver
         data:
             jpa:

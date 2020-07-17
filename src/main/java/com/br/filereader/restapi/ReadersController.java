@@ -1,6 +1,6 @@
 package com.br.filereader.restapi;
 
-import com.br.filereader.infra.model.UserDocument;
+import com.br.filereader.infra.model.UserModel;
 import com.br.filereader.infra.model.UserResponse;
 import com.br.filereader.services.ReadersCvsFilesService;
 import io.swagger.annotations.ApiOperation;
@@ -45,7 +45,7 @@ public class ReadersController {
     @ApiOperation("Listar todos")
     @GetMapping
     @ResponseStatus(OK)
-    public List<UserDocument> listAll(){
+    public List<UserModel> listAll(){
 
         return filesService.listAll();
     }

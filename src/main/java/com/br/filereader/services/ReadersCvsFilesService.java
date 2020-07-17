@@ -3,7 +3,7 @@ package com.br.filereader.services;
 import com.br.filereader.infra.converter.FileConverter;
 import com.br.filereader.infra.converter.UserResponseConverter;
 import com.br.filereader.infra.exception.FileInvalidException;
-import com.br.filereader.infra.model.UserDocument;
+import com.br.filereader.infra.model.UserModel;
 import com.br.filereader.infra.model.UserResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -55,7 +55,7 @@ public class ReadersCvsFilesService {
     }
 
 
-    public List<UserDocument> listAll() {
+    public List<UserModel> listAll() {
         return userService.listAll();
     }
 

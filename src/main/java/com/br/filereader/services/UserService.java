@@ -1,7 +1,7 @@
 package com.br.filereader.services;
 
 import com.br.filereader.infra.converter.UserDocumentConvert;
-import com.br.filereader.infra.model.UserDocument;
+import com.br.filereader.infra.model.UserModel;
 import com.br.filereader.infra.model.UserResponse;
 import com.br.filereader.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -30,18 +30,17 @@ public class UserService {
         users.stream()
             .map(doc -> documentConvert.convert(doc))
             .forEach(saved ->{
-                final UserDocument save = repository.save(saved);
+                final UserModel save = repository.save(saved);
                 log.info("Salvo [] ", save);
             });
-
         log.info("Salvo com sucesso");
 
 
     }
 
-    public List<UserDocument> listAll(){
-
-        return  repository.findAll();
+    public List<UserModel> listAll(){
+        final List<UserModel> list = repository.findAll();
+        return list;
     }
 
 }
