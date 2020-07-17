@@ -1,11 +1,17 @@
 server.port: 9001
 springfox.documentation.swagger.v2.path: /api-docs
 spring:
-    application.name: file-readers
-    data.mongodb.uri: mongodb://localhost:27058/db.readers
-    h2.console:
-        enabled: true
-        path: /console
-        jooq.sql-dialect: H2
+    datasource:
+        name: tadpgweb
+        username: postgres
+        password: secret
+        url: jdbc:postgresql://localhost:5442/tadpgweb
+        driver-class-name: org.postgresql.Driver
+        data:
+            jpa:
+                database: POSTGRES
+                database-platform: POSTGRES
+            jta:
+                enabled: true
 
 logging.pattern.console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta([%t]) %m%n"

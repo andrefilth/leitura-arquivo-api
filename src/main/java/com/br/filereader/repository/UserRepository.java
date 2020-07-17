@@ -1,6 +1,7 @@
 package com.br.filereader.repository;
 
 import com.br.filereader.infra.model.UserDocument;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
@@ -9,6 +10,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author André Franco
  * @version 1.0 11/07/2020
  */
-public interface UserRepository extends MongoRepository<UserDocument, String> {
+public interface UserRepository extends JpaRepository<UserDocument, String> {
 
 }
